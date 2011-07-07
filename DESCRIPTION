@@ -1,0 +1,8 @@
+Package: opani
+Version: 1.1
+Title: Opani Toolbox for R
+Description: Opani transmogrifies big data analysis scripts into gorgeous, sharable, and secure web apps.
+Author: Opani
+Maintainer: Opani <info@opani.com>
+License: file LICENSE
+Copyright: 2011, Opani LLC
