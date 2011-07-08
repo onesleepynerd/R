@@ -165,11 +165,10 @@ load.app <- function(app=NULL) {
     } else {
         if (!file.exists(dirname)) {
             new <- TRUE
-            cat('Creating', dirname, '...\n')
+            cat('Creating directory', dirname, '\n')
             dir.create(dirname, showWarnings=FALSE)
-        } else {
-        setwd(dirname)
         }
+        setwd(dirname)
         cat('Changed working directory to', dirname, '\n')
     }
     #if (!file.exists('run.r')) {
