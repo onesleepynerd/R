@@ -1,9 +1,8 @@
-\name{opani}
+\name{Opani package}
 \alias{opani}
 \docType{package}
 \title{Opani Toolbox for R}
 \description{Download, update and run Opani cloud apps.}
-\usage{}
 \details{
 Opani apps help you gain insight quickly by scaling your R code to hundereds of
 computers in the cloud or in your office. This package lets you interact quickly
@@ -13,19 +12,16 @@ computers when appropriate.
 For documentation on topics not covered here, see https://opani.com/help/
 }
 \author{Opani LLC <info@opani.com>}
-\references{
-}
 \keyword{ package }
 \seealso{
-  \code{\link{create.app}, \link{load.app}, \link{run.app}, \link{stop.app}, \link{get.result},
-  \link{load.file},\link{save.file},\link{load.files},\link{save.files},
+  \link{create.app}, \link{load.app}, \link{run.app}, \link{stop.app}, \link{get.result},
+  \link{load.file}, \link{save.file}, \link{load.files}, \link{save.files},
   \link{load.s3}, \link{save.s3}, \link{load.cloudfile}, and \link{save.cloudfile}.
-  }
 }
 \examples{
 # Load an existing Opani app locally and test a single key
 load.app('ryan/aapl-goog-correlation')
-key <- 'AAPL,GOOG,Volume'; source('run.r')
+run.app.local(keys = c('AAPL,GOOG,Volume'))
 
 # Create a simple app
 dir.create('stock-history'); setwd('stock-history')
@@ -35,14 +31,14 @@ writeLines(c(
  "stock <- read.csv(url, colClasses=c('Date',NA,NA,NA,NA,NA,NA))",
  "print(summary(stock))",
  "plot(Close~Date, stock, type='l', main='Closing price over time')",
- "show.image()"), 'run.r'
+ "show()"), 'run.r'
 )
 
 # Test the app out locally
-key <- 'AAPL'; source('run.r')
+run.app.local('AAPL')
 
 # Run the app in parallel on the cloud
-run.app(c('AAPL','GOOG','MSFT','AMZN'))
+run.app(keys = c('AAPL','GOOG','MSFT','AMZN'))
 
 # Save local files to Amazon S3 or Rackspace CloudFiles
 # Uses your own S3 bucket or CloudFiles container (https://opani.com/account/)

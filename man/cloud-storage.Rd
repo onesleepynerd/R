@@ -1,4 +1,4 @@
-\name{cloud-storage}
+\name{Cloud storage}
 \alias{load.s3}
 \alias{save.s3}
 \alias{load.cloudfile}
@@ -16,7 +16,10 @@ multiple computers.
   save.cloudfile(filename)
 }
 \arguments{
-  \item{filename}{}
+  \item{filename}{
+    Name of the local file for \code{save} commands or name of the remote file
+    for \code{load} commands.
+  }
 }
 \details{
 The \code{load.s3} and \code{load.cloudfile} commands look for the \code{filename}
@@ -32,29 +35,9 @@ instead of downloading one from the network. Since Opani runs keys on the same
 machines across multiple runs of an app, this caching step results in a nice
 speedup.
 }
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
 \seealso{
-  \code{\link{create.app}, \link{load.app}, \link{run.app}, \link{get.result},
-  \link{load.s3}, \link{save.s3}, \link{load.cloudfile}, and \link{save.cloudfile}.
-  }
+  \link{create.app}, \link{load.app}, \link{run.app}, \link{stop.app}, \link{get.result},
+  \link{load.file}, \link{save.file}, \link{load.files}, and \link{save.files}.
 }
 \examples{
 # Write a local data set to a file

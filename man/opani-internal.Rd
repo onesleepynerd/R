@@ -1,4 +1,5 @@
 \name{opani-internal}
+\alias{get.username}
 \alias{OPANI_HOME}
 \alias{OPANI_TOKEN}
 \alias{OPANI_URL}
@@ -14,7 +15,6 @@
 \alias{get.file}
 \alias{get.opani}
 \alias{get.s3.file}
-\alias{get.username}
 \alias{get.values}
 \alias{is.opani}
 \alias{is.worker}
@@ -29,11 +29,15 @@
 \alias{tid}
 \alias{uid}
 \alias{wid}
+\alias{odir}
+\alias{values}
+\alias{opani.appuser}
+\alias{opani.appname}
+\alias{o.figure.name}
+\alias{cachepath.init}
 \title{Internal Opani Functions}
 \description{
  Internal Opani functions
-}
-\usage{
 }
 \details{
 These are not to be called by the user (or in some cases are just

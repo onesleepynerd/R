@@ -1,4 +1,4 @@
-\name{app-functions}
+\name{App functions}
 \alias{create.app}
 \alias{load.app}
 \alias{run.app}
@@ -28,6 +28,9 @@
   \item{private}{
   TRUE if you want the app to be private, otherwise, the app will be public.
   }
+  \item{keys}{
+  A vector or list of keys for the app to paralellize over.
+  }
   \item{cluster}{
   The name of the cluster you want this app to run on i.e. 'local', 'Free_Cluster', 'Amazon', or 'Rackspace'.
   Defaults to the last cluster the app ran on.
@@ -40,32 +43,13 @@
   \code{"json"} or \code{"html"} format.
   }
 }
-\details{
-
-}
 \value{
 For \code{run.app}, the return value is the \code{jobid} of running job. This can be used to call
 \code{get.result} for a particular job.
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
 \seealso{
-  \code{\link{load.file},
-  \link{save.file},
-  \link{load.files},
-  \link{save.files},
+  \link{load.file}, \link{save.file}, \link{load.files}, \link{save.files},
   \link{load.s3}, \link{save.s3}, \link{load.cloudfile}, and \link{save.cloudfile}.
-  }
 }
 \examples{
 # Create a working directory with the same name as our app
@@ -78,17 +62,17 @@ writeLines(c(
  "stock <- read.csv(url, colClasses=c('Date',NA,NA,NA,NA,NA,NA))",
  "print(summary(stock))",
  "plot(Close~Date, stock, type='l', main='Closing price over time')",
- "show.image()"), 'run.r'
+ "show()"), 'run.r'
 )
 
 # Create the app
 create.app(question='What does the history of each stock look like?')
 
 # Test the app out locally
-key <- 'AAPL'; source('run.r')
+run.app.local(keys = c('AAPL'))
 
 # Run the app in parallel on the cloud
-run.app(c('AAPL','GOOG','MSFT','AMZN'))
+run.app(keys = c('AAPL','GOOG','MSFT','AMZN'))
 
 # Look at the reusult (use opani.com to view the results in real-time)
 get.result()

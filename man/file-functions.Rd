@@ -1,4 +1,4 @@
-\name{file-functions}
+\name{File functions}
 \alias{load.file}
 \alias{save.file}
 \alias{load.files}
@@ -31,28 +31,9 @@ These functions help you synchronize your source files between your local comput
   For more advanced synchronization of local code to Opani apps using git, see 
   http://opani.com/help/git-notes
 }
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
 \seealso{
-  \code{\link{create.app}, \link{load.app}, \link{run.app}, \link{get.result},
- \link{load.s3}, \link{save.s3}, \link{load.cloudfile}, and \link{save.cloudfile}.}
+ \link{create.app}, \link{load.app}, \link{run.app}, \link{get.result},
+ \link{load.s3}, \link{save.s3}, \link{load.cloudfile}, and \link{save.cloudfile}.
 }
 \examples{
 # Make some local changes, then:
