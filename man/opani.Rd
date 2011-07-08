@@ -4,9 +4,9 @@
 \title{Opani Toolbox for R}
 \description{Download, update and run Opani cloud apps.}
 \details{
-Opani apps help you gain insight quickly by scaling your R code to hundereds of
+Opani apps help you gain insight quickly by scaling your R code to hundreds of
 computers in the cloud or in your office. This package lets you interact quickly
-with Opani, testing your code locally while debugging, then scaling it to many
+with Opani, testing your code locally while debugging, then scaling it to multiple
 computers when appropriate.
 
 For documentation on topics not covered here, see https://opani.com/help/
@@ -41,7 +41,7 @@ run.app.local('AAPL')
 run.app(keys = c('AAPL','GOOG','MSFT','AMZN'))
 
 # Save local files to Amazon S3 or Rackspace CloudFiles
-# Uses your own S3 bucket or CloudFiles container (https://opani.com/account/)
+# Use your own S3 bucket or CloudFiles container (https://opani.com/account/)
 save.s3('data.csv')
 save.cloudfile('data.csv')
 

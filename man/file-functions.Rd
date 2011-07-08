@@ -19,7 +19,7 @@ These functions help you synchronize your source files between your local comput
 }
   \item{app}{
     The name of the app. This can be a simple name like \code{"stock-history"} or can include the name
-    of an opani user, i.e. \code{"ryan/stock-explorer"}. If you leave it out, the package will try
+    of an Opani user, i.e. \code{"ryan/stock-explorer"}. If you leave it out, the package will try
     to use the name of your current directory (provided you have a \code{"run.r"} script in the directory).
   }
 }

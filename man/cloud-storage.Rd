@@ -46,7 +46,7 @@ write.csv(cars, 'cars.csv')
 # Upload the local file to Amazon S3
 save.s3('cars.csv')
 
-# Download the file (could do this from another machine, too)
+# Download the file from Amazon S3 (or another machine)
 load.s3('cars.csv')
 
 # Read in the data

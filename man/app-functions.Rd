@@ -26,17 +26,17 @@
   The question this app is trying to answer.
   }
   \item{private}{
-  TRUE if you want the app to be private, otherwise, the app will be public.
+  TRUE if you want the app to be private; otherwise, the app will be public.
   }
   \item{keys}{
-  A vector or list of keys for the app to paralellize over.
+  The app will parallelize over this vector or list of keys.
   }
   \item{cluster}{
-  The name of the cluster you want this app to run on i.e. 'local', 'Free_Cluster', 'Amazon', or 'Rackspace'.
-  Defaults to the last cluster the app ran on.
+  The name of the cluster you want this app to use, e.g. "local", "Free_Cluster", "Amazon", or "Rackspace".
+  Defaults to the last cluster the app used.
   }
   \item{jobid}{
-  The number of the job operate on. Deafults to the latest job. This number is returned by \code{run.app}.
+  The id of the job to operate on. Defaults to the latest job. This number is returned by \code{run.app}.
   }
   \item{format}{
   The format for job results. \code{"text"} is the default, but you can also get the results in
@@ -44,7 +44,7 @@
   }
 }
 \value{
-For \code{run.app}, the return value is the \code{jobid} of running job. This can be used to call
+For \code{run.app}, the return value is the \code{jobid} of the running job. This can be used to call
 \code{get.result} for a particular job.
 }
 \seealso{
@@ -74,7 +74,7 @@ run.app.local(keys = c('AAPL'))
 # Run the app in parallel on the cloud
 run.app(keys = c('AAPL','GOOG','MSFT','AMZN'))
 
-# Look at the reusult (use opani.com to view the results in real-time)
+# Look at the result (use opani.com to view the results in real-time)
 get.result()
 
 }
